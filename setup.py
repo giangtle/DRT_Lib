@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="DRT_Lib-giangtle",
+    name="DRT_Lib",
     version="0.0.1",
     author="Giang Le",
     author_email="giangtle@uw.edu",
