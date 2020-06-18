@@ -1,0 +1,21 @@
+certifi==2020.4.5.2
+cycler==0.10.0
+kiwisolver==1.2.0
+matplotlib @ file:///opt/concourse/worker/volumes/live/4bdf86c1-7bb0-45b5-51d4-44aac089de8d/volume/matplotlib-base_1592406211112/work
+mkl-fft==1.1.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+numpy==1.18.1
+olefile==0.46
+Pillow==7.1.2
+Pygments==2.6.1
+pyparsing==2.4.7
+python-dateutil==2.8.1
+readme-renderer==25.0
+requests-toolbelt==0.9.1
+scipy==1.4.1
+six==1.15.0
+torch==1.5.1
+torchvision==0.6.0a0+35d732a
+tornado==6.0.4
+twine==3.1.1
