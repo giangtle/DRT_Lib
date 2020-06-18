@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="DRT_Lib",
-    version="0.0.2",
+    version="0.0.3",
     author="Giang Le",
     author_email="giangtle@uw.edu",
     description="Python implementation of different algorithms for calculating electrochemical impedance distribution of relaxation times",
