@@ -3,7 +3,7 @@
 
 Python implementation of different algorithms for calculating electrochemical impedance distribution of relaxation times. 
 
-## Code Credits:
+## Code Credits
 Major credit to Liu and Ciucci source codes ([GitHub Page](https://github.com/ciuccislab), [Deep-Prior DRT](https://github.com/ciuccislab/DP-DRT), [Gaussian Process DRT](https://github.com/ciuccislab/GP-DRT)). Two algorithms for calculating DRT are based straight of their works & open-source codes.
 
 ## Methods Included
@@ -41,3 +41,5 @@ gamma, R_inf = DRT_Lib.TR_DRT(freq_vec, Z_exp, display=True)
 # To caclulate EIS from DRT results:
 Z_cal = DRT_Lib.calculate_EIS(freq_vec, gamma, R_inf)
 ```
+## License
+Released under the [MIT License](LICENSE).
