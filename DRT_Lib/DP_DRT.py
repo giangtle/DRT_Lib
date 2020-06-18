@@ -9,10 +9,10 @@ from .submodule import display_result
 
 
 def DP_DRT(freq_vec, Z_exp, lambda_limit=1e-4, learning_rate=1e-5, display=False):
-    gamma, R_inf, loss = train_model(freq_vec, Z_exp, lambda_limit, learning_rate)
+    gamma, R_inf = train_model(freq_vec, Z_exp, lambda_limit, learning_rate)
     if display is True:
         display_result(freq_vec, Z_exp, gamma, R_inf)
-    return gamma, R_inf, loss
+    return gamma, R_inf
 
 def train_model(freq_vec, Z_exp, lambda_limit, learning_rate):
     N_freqs = len(freq_vec)
@@ -58,7 +58,7 @@ def train_model(freq_vec, Z_exp, lambda_limit, learning_rate):
     gamma = gamma_torch.detach().numpy().reshape(-1)
     R_inf = gamma[-1]
     gamma = gamma[:-1]
-    return gamma, R_inf, old_loss
+    return gamma, R_inf
     
 def make_dp_model(N_freqs):
     """

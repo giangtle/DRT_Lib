@@ -7,11 +7,11 @@ from .submodule import calc_A_re, calc_A_im
 from .submodule import display_result
 
 
-def TR_DRT(freq_vec, Z_exp, x0=None, el=1e-4, method="SLSQP", display=False):
-    gamma, R_inf, loss = Tikhonov_minimization(freq_vec, Z_exp, x0, el, method)
+def TR_DRT(freq_vec, Z_exp, x0=None, el=1e-2, method="SLSQP", display=False):
+    gamma, R_inf = Tikhonov_minimization(freq_vec, Z_exp, x0, el, method)
     if display is True:
         display_result(freq_vec, Z_exp, gamma, R_inf)
-    return gamma, R_inf, loss
+    return gamma, R_inf
 
 def Tikhonov_minimization(freq_vec, Z_exp, x0, el, method):
     Z_exp_re=np.real(Z_exp)
@@ -24,12 +24,9 @@ def Tikhonov_minimization(freq_vec, Z_exp, x0, el, method):
     result = minimize(S, x0, args=(Z_exp_re, Z_exp_im, A_re, A_im, el), method=method,
                       bounds = bounds, options={'disp': True, 'ftol':1e-10, 'maxiter':200})
     gamma_R_inf = result.x
-    MSE_re = np.sum((gamma_R_inf[-1] + np.matmul(A_re, gamma_R_inf[:-1]) - Z_exp_re)**2)
-    MSE_im = np.sum((np.matmul(A_im, gamma_R_inf[:-1]) - Z_exp_im)**2)
-    loss = MSE_re + MSE_im
     R_inf = gamma_R_inf[-1]
     gamma = gamma_R_inf[:-1]
-    return gamma, R_inf, loss
+    return gamma, R_inf
     
 def S(gamma_R_inf, Z_exp_re, Z_exp_im, A_re, A_im, el):
     MSE_re = np.sum((gamma_R_inf[-1] + np.matmul(A_re, gamma_R_inf[:-1]) - Z_exp_re)**2)
