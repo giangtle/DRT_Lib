@@ -2,6 +2,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Python implementation of different algorithms for calculating electrochemical impedance distribution of relaxation times. 
+## Installation
+```
+pip install -i https://test.pypi.org/simple/ DRT-Lib==0.0.2
+```
 
 ## Code Credits
 Major credit to Liu and Ciucci source codes ([GitHub Page](https://github.com/ciuccislab), [Deep-Prior DRT](https://github.com/ciuccislab/DP-DRT), [Gaussian Process DRT](https://github.com/ciuccislab/GP-DRT)). Two algorithms for calculating DRT are based straight of their works & open-source codes.
