@@ -33,11 +33,11 @@ phi = 0.8
 tau_0 = 1.
 C = tau_0**phi/R_ct
 # Exact impedance:
-Z_exact = R_inf+1./(1./R_ct+C*(1j*2.*pi*freq_vec)**phi)
+Z_exact = R_inf + 1./( 1./R_ct + C*(1j*2.*pi*freq_vec)**phi )
 # Add noise to make synthetic experiment impedance data:
 rng = np.random.seed(214975)
 sigma_n_exp = 0.1
-Z_exp = Z_exact + sigma_n_exp*(np.random.normal(0, 1, N_freqs)+1j*np.random.normal(0, 1, N_freqs))
+Z_exp = Z_exact + sigma_n_exp*( np.random.normal(0, 1, N_freqs) + 1j*np.random.normal(0, 1, N_freqs) )
 
 # Compute Tikhonov Regularization/Ridge Regression Distrubution of Relaxation Times:
 gamma, R_inf = DRT_Lib.TR_DRT(freq_vec, Z_exp, display=True)
