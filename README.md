@@ -16,6 +16,7 @@ Major credit to Liu and Ciucci source codes ([GitHub Page](https://github.com/ci
 * Tikhonov Regularization/Ridge Regression Distribution of Relaxation Times ([Saccoccio et al., 2014](https://www.sciencedirect.com/science/article/pii/S0013468614018763))
 
 ## Quick Start
+Checkout Example.ipynb file with jupyter notebook for more details.
 ```python
 import DRT_Lib
 import numpy as np
