@@ -4,6 +4,10 @@
 Python implementation of different algorithms for calculating electrochemical impedance distribution of relaxation times. 
 ## Installation
 ```
+pip install -i https://test.pypi.org/simple/ DRT-Lib==0.0.4
+```
+or
+```
 npm install @giangtle/drt_lib@1.0.1
 ```
 or
