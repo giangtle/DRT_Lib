@@ -5,7 +5,7 @@ matplotlib @ file:///opt/concourse/worker/volumes/live/4bdf86c1-7bb0-45b5-51d4-4
 mkl-fft==1.1.0
 mkl-random==1.1.1
 mkl-service==2.3.0
-numpy==1.18.1
+numpy==1.22.0
 olefile==0.46
 Pillow==7.1.2
 Pygments==2.6.1
