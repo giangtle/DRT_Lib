@@ -1,4 +1,4 @@
-certifi==2020.4.5.2
+certifi==2022.12.7
 cycler==0.10.0
 kiwisolver==1.2.0
 matplotlib @ file:///opt/concourse/worker/volumes/live/4bdf86c1-7bb0-45b5-51d4-44aac089de8d/volume/matplotlib-base_1592406211112/work
